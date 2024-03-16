@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "LTSoul";
+  src: url(../fonts/LTSoul-Medium.otf);
+}
+
+body {
+  font-family: "LTSoul";
+  background-color: #f9f9f9;
+}
+
+.contenu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  padding: 5px;
+}
+
+.perso {
+  display: flex;
+  gap: 10px;
+  border-radius: 6px;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.perso article {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.carte {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.carte > div {
+  pointer-events: none;
+}
+
+.carte > img {
+  object-fit: contain;
+  display: block;
+  max-height: 350px;
+  pointer-events: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.carte.button {
+  align-items: center;
+  font-size: 20px;
+}
+
+.carte.button:hover {
+  box-shadow: rgba(150, 0, 0, 0.5) 0px 5px 15px;
+}
+
+@media screen and (min-width: 575px) {
+  .perso {
+    font-size: 20px;
+  }
+
+  .carte > img {
+    max-height: 550px;
+  }
+
+  .carte > a {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .perso {
+    font-size: 25px;
+  }
+
+  .carte > img {
+    max-height: 750px;
+  }
+
+  .carte > a {
+    font-size: 35px;
+  }
+}
