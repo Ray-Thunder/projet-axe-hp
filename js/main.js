@@ -1,11 +1,20 @@
+// fonction qui permet de récupérer les personnages de hp
 function fetchCharacters() {
   return fetch("https://hp-api.lainocs.fr/characters").then((response) =>
     response.json()
   )
 }
 
+// fonction qui permet d'afficher les personnages d'hp
 async function displayCharacters() {
   const data = await fetchCharacters();
+  /* Pour chaque personnage on créer une carte de la forme :
+  classe carte avec dedans le nom du personnage et sa maison en haut,
+  l'image du personnage,
+  le role du personnage,
+  sa baguette,
+  son patronus et
+  son acteur */
   data.forEach((character) => {
     document.querySelector("#characters").innerHTML += `
       <div class="carte">
