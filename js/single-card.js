@@ -1,3 +1,4 @@
+// fonction qui permet de récuperer le personnage
 function fetchCharacter() {
   let url = window.location.search;
   let slug = new URLSearchParams(url).get("slug");
@@ -6,8 +7,16 @@ function fetchCharacter() {
   );
 }
 
+// fonction qui affiche le personnage
 async function displayCharacter() {
   const data = await fetchCharacter();
+  /* on affiche la carte de la forme :
+  le nom et la maison du personnage,
+  son image,
+  son role,
+  sa baguette,
+  son patronus et
+  son acteur */
   document.querySelector("#character").innerHTML = `
     <section class="main">
       <div class="perso">
